@@ -29,34 +29,13 @@ Each threat is scored using a 3×3 Likelihood × Impact matrix.
 
 
 
-## Risk Matrix (Heat Map)
+## Risk Matrix
 
-```
-Impact
-Low(1) Med(2) High(3)
-
-┌────────┬────────┬────────┐
-
-High │ 3 │ 6 │ 9 │
-
-(3) │ Medium │ High │Critical│
-
-├────────┼────────┼────────┤
-
-Medium │ 2 │ 4 │ 6 │
-
-(2) │ Low │ Medium │ High │
-
-├────────┼────────┼────────┤
-
-Low │ 1 │ 2 │ 3 │
-
-(1) │ Low │ Low │ Medium │
-
-└────────┴────────┴────────┘
-
-
-```
+| Likelihood / Impact | Low (1) | Medium (2) | High (3) |
+|---|---:|---:|---:|
+| High (3) | 3 Medium | 6 High | 9 Critical |
+| Medium (2) | 2 Low | 4 Medium | 6 High |
+| Low (1) | 1 Low | 2 Low | 3 Medium |
 
 ---
 
