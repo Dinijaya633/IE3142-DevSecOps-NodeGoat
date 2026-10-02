@@ -11,19 +11,12 @@ represents a category of security threat:
 
 
 | Letter | Threat | Description |
-
 |---|---|---|
-
 | S | Spoofing | Pretending to be someone else |
-
 | T | Tampering | Modifying data or code |
-
 | R | Repudiation | Denying an action took place |
-
 | I | Information Disclosure | Exposing information to unauthorised parties |
-
 | D | Denial of Service | Making the system unavailable |
-
 | E | Elevation of Privilege | Gaining higher permissions |
 
 
@@ -371,19 +364,12 @@ and stop responding to all queries.
 
 
 | # | Threat | STRIDE | CWE | Likelihood | Impact |
-
 |---|---|---|---|---|---|
-
 | 1 | SSJS Injection | T / E | CWE-95 | High | High |
-
 | 2 | NoSQL Injection | I / T | CWE-943 | High | High |
-
 | 3 | IDOR | S / E | CWE-639 | High | Medium |
-
 | 4 | SSRF | I / T | CWE-918 | Medium | High |
-
 | 5 | Weak Session Secret | S | CWE-798 | Medium | High |
-
 | 6 | DoS via `$where` | D | CWE-400 | Medium | High |
 
 

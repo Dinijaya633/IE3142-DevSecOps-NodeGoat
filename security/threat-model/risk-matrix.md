@@ -17,15 +17,10 @@ Each threat is scored using a 3×3 Likelihood × Impact matrix.
 
 
 | Risk Score | Rating | Action required |
-
 |---|---|---|
-
 | 1–2 | Low | Monitor |
-
 | 3–4 | Medium | Mitigate in next release |
-
 | 6 | High | Mitigate before release |
-
 | 9 | Critical | Mitigate immediately |
 
 
@@ -36,8 +31,8 @@ Each threat is scored using a 3×3 Likelihood × Impact matrix.
 
 ## Risk Matrix (Heat Map)
 
-mpact
-
+```
+Impact
 Low(1) Med(2) High(3)
 
 ┌────────┬────────┬────────┐
@@ -61,6 +56,7 @@ Low │ 1 │ 2 │ 3 │
 └────────┴────────┴────────┘
 
 
+```
 
 ---
 
@@ -71,19 +67,12 @@ Low │ 1 │ 2 │ 3 │
 
 
 | # | Threat | Likelihood | Impact | Risk Score | Rating |
-
 |---|---|---|---|---|---|
-
 | 1 | SSJS Injection | 3 | 3 | **9** | **Critical** |
-
 | 2 | NoSQL Injection | 3 | 3 | **9** | **Critical** |
-
 | 3 | IDOR | 3 | 2 | **6** | **High** |
-
 | 4 | SSRF | 2 | 3 | **6** | **High** |
-
 | 5 | Weak Session Secret | 2 | 3 | **6** | **High** |
-
 | 6 | DoS via `$where` | 2 | 3 | **6** | **High** |
 
 

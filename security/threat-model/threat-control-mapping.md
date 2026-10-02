@@ -19,19 +19,12 @@ where the control lives.
 
 
 | # | Threat | Control | Location | Type |
-
 |---|---|---|---|---|
-
 | 1 | SSJS Injection | Replace `eval()` with `parseInt()` | `app/routes/contributions.js` line 32 | Preventive |
-
 | 2 | NoSQL Injection | Type-coerce `threshold` to integer; range check 0–99 | `app/data/allocations-dao.js` line 71 | Preventive |
-
 | 3 | IDOR | Read `userId` from session, not URL | `app/routes/allocations.js` line 14 | Preventive |
-
 | 4 | SSRF | Validate `url` against allowlist of permitted hosts | `app/routes/research.js` line 14 | Preventive |
-
 | 5 | Weak Session Secret | Load `cookieSecret` from environment variable | `config/env/all.js` line 6 | Preventive |
-
 | 6 | DoS via `$where` | Same as Threat 2 (removes `$where` from user input path) | `app/data/allocations-dao.js` line 71 | Preventive |
 
 
@@ -217,15 +210,10 @@ automated controls:
 
 
 | Control | Pipeline Job | Where |
-
 |---|---|---|
-
 | Custom SAST rules | `sast` | `.semgrep/rules.yml` |
-
 | Dependency vulnerability scan | `dependency-scan` | `.github/workflows/security-pipeline.yml` |
-
 | Secret detection | `secrets-scan` | `.github/workflows/security-pipeline.yml` |
-
 | Container image CVEs | `container-scan` | `.github/workflows/security-pipeline.yml` |
 
 
@@ -243,19 +231,12 @@ After the fixes:
 
 
 | # | Threat | Residual risk | Reason |
-
 |---|---|---|---|
-
 | 1 | SSJS Injection | **Low** | `eval()` removed, pattern scanned in CI |
-
 | 2 | NoSQL Injection | **Low** | `parseInt` enforced, pattern scanned in CI |
-
 | 3 | IDOR | **Low** | Session-based access control, pattern scanned in CI |
-
 | 4 | SSRF | **Low** | Allowlist enforced, pattern scanned in CI |
-
 | 5 | Weak Session Secret | **Low** | Environment variables, GitLeaks scans |
-
 | 6 | DoS via `$where` | **Low** | Fixed alongside Threat 2 |
 
 
