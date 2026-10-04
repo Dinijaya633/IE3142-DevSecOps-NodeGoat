@@ -1,0 +1,14 @@
+﻿                  
+                  
+ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+Γöé 1 Code Finding Γöé
+ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+                                
+    /scan/research-vulnerable.js
+   Γ¥»Γ¥»Γ¥▒ scan.ssrf-user-controlled-url
+          Γ¥░Γ¥░ Blocking Γ¥▒Γ¥▒
+          A user-controlled URL is concatenated and passed to an HTTP client. This allows SSRF (CWE-918).
+          Validate the URL against an allowlist before making the request.                               
+                                                                                                         
+           15Γöå const url = req.query.url + req.query.symbol;
+
