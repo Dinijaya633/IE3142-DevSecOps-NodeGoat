@@ -82,7 +82,7 @@ The main objectives of this project are to:
 | Member 3 | IT24101569 | [@hashen16](https://github.com/hashen16) | Vulnerability Assessment & Secure Coding |
 | Member 4 | IT24101664 | [@IT24101569](https://github.com/IT24101569) | CI/CD & DevSecOps Automation |         |
 
-> **Note:** Student IDs and GitHub usernames should be verified against the university registration system before final submission.
+
 
 ---
 
