@@ -75,12 +75,12 @@ The main objectives of this project are to:
 
 # 👥 Group Members
 
-| Member   | Student ID | GitHub                                         | Primary Area                             |
-| -------- | ---------- | ---------------------------------------------- | ---------------------------------------- |
-| Member 1 | IT24101931 | [@Dinijaya633](https://github.com/Dinijaya633) | Application, Architecture & Docker       |
-| Member 2 | IT24100751 | [@IT24100751](https://github.com/IT24100751)   | Threat Modelling & Risk Assessment       |
-| Member 3 | IT24101664 | [@IT24101664](https://github.com/hashen16)   | Vulnerability Assessment & Secure Coding |
-| Member 4 | IT24101569 | [@IT24101569](https://github.com/IT24101569)   | CI/CD & DevSecOps Automation             |
+| Member | Student ID | GitHub | Primary Area |
+|---|---|---|---|
+| Member 1 | IT24101931 | [@Dinijaya633](https://github.com/Dinijaya633) | Application, Architecture & Docker |
+| Member 2 | IT24100751 | [@IT24100751](https://github.com/IT24100751) | Threat Modelling & Risk Assessment |
+| Member 3 | IT24101569 | [@hashen16](https://github.com/hashen16) | Vulnerability Assessment & Secure Coding |
+| Member 4 | IT24101664 | [@IT24101569](https://github.com/IT24101569) | CI/CD & DevSecOps Automation |         |
 
 > **Note:** Student IDs and GitHub usernames should be verified against the university registration system before final submission.
 
