@@ -24,9 +24,9 @@
 
 | Member 1 | \[Your ID] | @Dinijaya633 | Application, Architecture \& Docker |
 
-| Member 2 | \[ID] | @hashen16 | Threat Modelling \& Risk Assessment |
+| Member 2 | IT24100751 | @IT24100751 | Threat Modelling \& Risk Assessment |
 
-| Member 3 | \[ID] | @IT24100751 | Vulnerability Assessment \& Secure Coding |
+| Member 3 | \[ID] | @hashen16 | Vulnerability Assessment \& Secure Coding |
 
 | Member 4 | \[ID] | @IT24101569 | CI/CD \& DevSecOps Automation |
 
