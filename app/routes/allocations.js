@@ -11,6 +11,10 @@ function AllocationsHandler(db) {
     this.displayAllocations = (req, res, next) => {
                // Fix for A4 Insecure DOR - take user id from session instead of from URL param
         const { userId } = req.session;
+if (!userId) {
+    return res.status(401).send("Authentication required");
+}
+
         const { threshold } = req.query;
 
         allocationsDAO.getByUserIdAndThreshold(userId, threshold, (err, allocations) => {

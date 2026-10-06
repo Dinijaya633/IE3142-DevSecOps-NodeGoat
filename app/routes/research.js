@@ -23,7 +23,7 @@ function ResearchHandler(db) {
                 return res.status(400).send("Invalid URL");
             }
 
-            if (!allowedHosts.includes(parsedUrl.hostname)) {
+            if (parsedUrl.protocol !== "https:" || !allowedHosts.includes(parsedUrl.hostname)) {
                 return res.status(400).send("URL not permitted");
             }
 

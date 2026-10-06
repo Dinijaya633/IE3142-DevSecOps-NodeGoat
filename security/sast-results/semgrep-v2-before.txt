@@ -1,0 +1,14 @@
+﻿                  
+                  
+ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+Γöé 1 Code Finding Γöé
+ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+                                   
+    /scan/allocations-vulnerable.js
+   Γ¥»Γ¥»Γ¥▒ scan.nosql-injection-where-interpolation
+          Γ¥░Γ¥░ Blocking Γ¥▒Γ¥▒
+          User-controlled input is interpolated directly into a MongoDB $where clause. This allows NoSQL
+          injection (CWE-943). Use parseInt() or strict type validation before building the query.      
+                                                                                                        
+           78Γöå $where: `this.userId == ${parsedUserId} && this.stocks > '${threshold}'`
+

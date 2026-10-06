@@ -1,0 +1,17 @@
+﻿                  
+                  
+ΓöîΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÉ
+Γöé 1 Code Finding Γöé
+ΓööΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÿ
+                                   
+    /scan/allocations-vulnerable.js
+   Γ¥»Γ¥»Γ¥▒ scan.idor-userid-from-params
+          Γ¥░Γ¥░ Blocking Γ¥▒Γ¥▒
+          User ID is taken from the URL parameter (req.params) instead of from the authenticated session. This
+          allows Insecure Direct Object Reference (IDOR) - a user can access other users' data by changing the
+          URL. Use req.session.userId instead.                                                                
+                                                                                                              
+           16Γöå const {
+           17Γöå     userId
+           18Γöå } = req.params;
+

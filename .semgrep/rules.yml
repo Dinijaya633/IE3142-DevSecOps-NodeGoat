@@ -4,15 +4,7 @@ rules:
     severity: ERROR
     message: >
       User-controlled input is interpolated directly into a MongoDB $where
-      clause. This allows NoSQL injection (CWE-943). Use parseInt() or
-      strict type validation before building the query.
-    metadata:
-      cwe:
-        - "CWE-943: Improper Neutralization of Special Elements in Data Query Logic"
-      owasp:
-        - "A1:2017 - Injection"
-      references:
-        - https://owasp.org/www-project-nodejs-goat/
+      clause. This allows NoSQL injection.
     patterns:
       - pattern-regex: "\\$where:.*'\\$\\{[^}]+\\}'"
 
@@ -20,13 +12,8 @@ rules:
     languages: [javascript]
     severity: ERROR
     message: >
-      User ID is taken from the URL parameter (req.params) instead of from
-      the authenticated session. This allows IDOR (CWE-639). Use req.session.userId.
-    metadata:
-      cwe:
-        - "CWE-639: Authorization Bypass Through User-Controlled Key"
-      owasp:
-        - "A01:2021 - Broken Access Control"
+      User ID is taken from req.params instead of the authenticated session.
+      This may allow IDOR.
     patterns:
       - pattern-regex: "const\\s*\\{[^}]*userId[^}]*\\}\\s*=\\s*req\\.params"
 
@@ -34,13 +21,16 @@ rules:
     languages: [javascript]
     severity: ERROR
     message: >
-      A user-controlled URL is concatenated and passed to an HTTP client.
-      This allows SSRF (CWE-918). Validate the URL against an allowlist
-      before making the request.
-    metadata:
-      cwe:
-        - "CWE-918: Server-Side Request Forgery (SSRF)"
-      owasp:
-        - "A10:2021 - Server-Side Request Forgery (SSRF)"
+      A user-controlled URL is passed to an HTTP request.
+      This may allow SSRF.
     patterns:
       - pattern-regex: "req\\.query\\.url\\s*\\+"
+
+  - id: ssjs-eval-request-body
+    languages: [javascript]
+    severity: ERROR
+    message: >
+      User-controlled request input is passed to eval().
+      This may allow Server-Side JavaScript Injection.
+    patterns:
+      - pattern-regex: 'eval\s*\(\s*req\.body\.[A-Za-z_$][A-Za-z0-9_$]*\s*\)'
