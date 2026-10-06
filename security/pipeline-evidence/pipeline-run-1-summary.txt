@@ -1,0 +1,19 @@
+Pipeline Run #1 — Commit c13eab0 — Branch secure
+Date: 2026-09-30
+Total duration: 2m 9s
+Status: FAILURE (3 pass, 2 fail)
+
+Job Results:
+  ✅ Build and Test (56s)
+  ✅ SAST (Semgrep) (20s)
+  ❌ Dependency Scan (npm audit) (1m 0s)
+  ✅ Secrets Scan (Gitleaks) (9s)
+  ❌ Container Scan (Trivy) (35s)
+
+Failure reasons:
+  Dependency Scan: npm audit found high-severity vulnerabilities in NodeGoat dependencies
+  Container Scan: Trivy found HIGH/CRITICAL CVEs in node:12-alpine base image
+
+This run demonstrates Section 2.4 requirement:
+  "At least one gate must be configured to genuinely fail the pipeline
+   when it detects a real issue above an agreed severity threshold."
