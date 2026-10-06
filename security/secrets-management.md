@@ -47,4 +47,4 @@ To verify no secrets are committed:
 ```bash
 
 git log --all -p | grep -i "secret\\|password" | grep -v "process.env"
-```n
+```
